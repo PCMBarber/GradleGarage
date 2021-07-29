@@ -4,12 +4,18 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.qa.automotives.Car;
 import org.qa.automotives.Vehicle;
 
 public class TestGarage2 {
 	Garage testGarage = Garage.getInstance();
+	
+	@Before
+	public void init() {
+		testGarage.empty();
+	}
 	
 	@Test
 	public void testGetGarage() {
